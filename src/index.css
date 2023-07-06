@@ -1,0 +1,135 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Spectral:wght@700&display=swap'); */
+
+/* variaveis globais */
+:root {
+  --main-bg-color: #0c111b;
+  --active-color-slide: #f80000;
+  --inactive-color-slide: #c4c4c4;
+
+  --letter-color-primary: #fff;
+  --letter-color-second: #9ca3af;
+
+  /* --type-letter-primary: Roboto;
+  --type-letter-secondary: DM Sans; */
+}
+
+.type_letter_primary {
+  color: var(--letter-color-second);
+  font-size: 12px;
+  font-family: DM Sans;
+  font-weight: 700;
+}
+
+.type_letter_secondary {
+  color: var(--letter-color-primary);
+  font-size: 12px;
+  font-family: Roboto;
+  font-weight: 500;
+}
+
+.type_letter_title {
+  font-size: 1.5rem;
+  font-family: Roboto;
+  font-weight: 600;
+}
+
+/* reset css */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--letter-color-primary);
+  /* font-family: DM Sans; */
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--letter-color-primary);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  display: block;
+  font-size: 1rem;
+  font-family: var(--type-first);
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  /* color: #333; */
+}
+
+/* .container {
+  max-width: 50rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.mainContainer {
+  margin-bottom: 2rem;
+} */
+
+/* .title {
+  font-family: var(--type-second);
+  line-height: 1;
+  font-size: 3rem;
+  margin: 1rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.title::after {
+  content: '';
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: #fb1;
+  position: absolute;
+  bottom: 5px;
+  left: -5px;
+  border-radius: 0.2rem;
+  z-index: -1;
+}
+
+.animeLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: animeLeft 0.3s forwards;
+}
+
+@keyframes animeLeft {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+} */
+
+/* .App {
+  display: flex;
+  flex-direction: column; */
+/* 10rem é o total do footer */
+/* min-height: calc(100vh + 10rem); */
+/* } */
+/* 
+.AppBody {
+  flex: 1;
+} */
+
+/* .VictoryContainer {
+  height: initial !important;
+} */

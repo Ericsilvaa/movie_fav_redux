@@ -1,0 +1,15 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 20rem);
+}
+
+.main {
+  flex: 1;
+}
+
+.container {
+  max-width: 65rem;
+  /* padding: 0 1rem; */
+  margin: 0 auto;
+}

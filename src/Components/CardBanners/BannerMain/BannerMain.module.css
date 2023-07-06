@@ -1,0 +1,42 @@
+.slideshow {
+  margin: 0 auto;
+  height: 60vh;
+  position: relative;
+}
+
+
+.slides {
+  height: 100%;
+  object-position: center;
+  filter: brightness(60%);
+  overflow: hidden; 
+}
+
+.description {
+  z-index: 1;
+  position: absolute;
+  height: 120px;
+  max-width: 200px;
+  width: 80%;
+  max-width: 87%;
+  left: 100px;
+  bottom: 30px;
+}
+
+
+.titulo {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.titulo:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.overview {
+  color: #D1D1D1;
+  font-weight: 500;
+  font-size: 1.085rem;
+}

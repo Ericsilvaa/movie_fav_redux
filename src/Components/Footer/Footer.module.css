@@ -1,0 +1,36 @@
+.bg_footer {
+  background-color: var(--main-bg-color);
+  height: 20rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+}
+
+.redes_sociais_list {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+  flex-wrap: wrap;
+}
+
+.redes_sociais_list li svg {
+  width: 24px;
+  height: 27.429px;
+}
+
+.footer_politicas {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+}
+
+.footer_description {
+  font-size: 18px;
+  font-weight: 700;
+}
