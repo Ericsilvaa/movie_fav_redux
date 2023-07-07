@@ -6,19 +6,21 @@ import Footer from "./Components/Footer";
 import RoutesApp from "./Routes";
 
 import "./App.css";
-import MoviesProvider from "./Context/Movies/MoviesProvider";
+
+// provider -> context API
+// import MoviesProvider from "./Context/Movies/MoviesProvider";
 
 function App() {
   return (
     <div className="app">
       <BrowserRouter>
-        <MoviesProvider>
+        {/* <MoviesProvider> */}
           <Header />
           <div className="main">
             <RoutesApp />
           </div>
           <Footer />
-        </MoviesProvider>
+        {/* </MoviesProvider> */}
       </BrowserRouter>
     </div>
   );
