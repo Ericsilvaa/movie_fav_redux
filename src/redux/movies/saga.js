@@ -1,27 +1,27 @@
-import {
-  all,
-  call,
-  fork,
-  put,
-  takeLatest,
-} from "redux-saga/effects";
-import { onGetMoviesSuccess, onGetMoviesFail } from "./slice";
+import { all, call, fork, put, takeLatest } from "redux-saga/effects";
+import { onGetMoviesPlayingNowSuccess, onGetMoviesPlayingNowFail } from "./slice";
+import { constants } from "../../services/constants";
 
-import axios from "axios";
+// import axios from "axios";
+import api from "../../services/api";
 
-function* onGetMovies() {
+function* onGetMoviesPlayingNow() {
   try {
-    const {data} = yield call(
-      axios.get,
-      "https://jsonplaceholder.typicode.com/users/"
+    const { data } = yield call(
+      api.get,
+      constants.events.GET_MOVIES_PLAYING_NOW
     );
-    yield put(onGetMoviesSuccess(data));
+    const movies = data.results
+    console.log(movies)
+    yield put(onGetMoviesPlayingNowSuccess(movies));
+
   } catch (error) {
-    yield put(onGetMoviesFail(error.message));
+    console.log('caiu no catch redux')
+    yield put(onGetMoviesPlayingNowFail(error.message));
   }
 }
 
-export default all([takeLatest("movies/onGetMovies", onGetMovies)]);
+export default all([takeLatest("movies/onGetMoviesPlayingNow", onGetMoviesPlayingNow)]);
 
 // const moviesSagas = [
 //   fork(onGetMovies),

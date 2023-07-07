@@ -7,20 +7,17 @@ import RoutesApp from "./Routes";
 
 import "./App.css";
 
-// provider -> context API
-// import MoviesProvider from "./Context/Movies/MoviesProvider";
+
 
 function App() {
   return (
     <div className="app">
       <BrowserRouter>
-        {/* <MoviesProvider> */}
           <Header />
           <div className="main">
             <RoutesApp />
           </div>
           <Footer />
-        {/* </MoviesProvider> */}
       </BrowserRouter>
     </div>
   );

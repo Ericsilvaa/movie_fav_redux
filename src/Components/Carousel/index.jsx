@@ -6,7 +6,6 @@ import "slick-carousel/slick/slick-theme.css";
 
 
 const Carousel = ({children}) => {
-  // console.log(data);
   const settings = {
     dots: true,
     infinite: true,

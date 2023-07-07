@@ -1,8 +1,4 @@
-import React, { useEffect, useState } from "react";
-// import { motion, AnimatePresence } from "framer-motion";
-import useGetMovies from "../../../Hooks/useGetMovies";
-
-import api from "../../../services/api";
+import React from "react";
 
 import styles from "./BannerMain.module.css";
 

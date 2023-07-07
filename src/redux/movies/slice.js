@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  movies: [],
+  moviesNowPlayind: [],
   loading: false,
   error: null,
 };
@@ -10,14 +10,18 @@ const moviesSlice = createSlice({
   name: "movies",
   initialState,
   reducers: {
-    onGetMovies: (state) => {
+    onGetMoviesPlayingNow: (state) => {
       state.loading = true;
     },
-    onGetMoviesSuccess: (state, action) => {
-      state.movies.push(...action.payload);
-      state.loading = false;
+    onGetMoviesPlayingNowSuccess: (state, {payload}) => {
+      return {
+        ...state,
+        moviesNowPlayind: payload.slice(0,6),
+        loading: false
+      }
+
     },
-    onGetMoviesFail: (state, action) => {
+    onGetMoviesPlayingNowFail: (state, action) => {
       state.error = action.payload;
       state.loading = false;
     },
@@ -25,7 +29,10 @@ const moviesSlice = createSlice({
 });
 
 // export slices
-export const { onGetMovies, onGetMoviesSuccess, onGetMoviesFail } =
-  moviesSlice.actions;
+export const {
+  onGetMoviesPlayingNow,
+  onGetMoviesPlayingNowSuccess,
+  onGetMoviesPlayingNowFail,
+} = moviesSlice.actions;
 
 export default moviesSlice.reducer;
