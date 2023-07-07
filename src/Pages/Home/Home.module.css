@@ -12,3 +12,10 @@
 /* .slick-slider:nth-child()
   dar um display none no button
 */
+
+
+.ContainerSessions {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}

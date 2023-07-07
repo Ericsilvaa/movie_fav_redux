@@ -15,36 +15,68 @@
   font-family: Roboto;
 }
 
-.carousel {
-  cursor: grab;
-  overflow: hidden;
+.container_session {
+    background-color: #d3d3d3;
 }
 
-.inner {
-  display: flex;
+.boxSession {
+  height: 33vh;
 }
 
-.item {
+
+
+/* .item {
   min-height: 150px;
   min-width: 200px;
   padding: 8px;
-}
+} */
 
-.item img {
+/* .item img {
   width: 100%;
   height: 90%;
   border-radius: 12px;
   pointer-events: none;
   border: 12px;
-}
+} */
 
-.container_session {
+
+/* .container_session {
   position: relative;
   width: 96%;
   margin: 0 auto;
-}
+} */
 
-.prevButton {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .carousel {
+  cursor: grab;
+  overflow: hidden;
+} */
+
+
+/* .inner {
+  display: flex;
+} */
+
+/* .prevButton {
   background-color: transparent;
   position: absolute;
   top: 50%;
@@ -58,4 +90,4 @@
   top: 50%;
   right: -20px;
   transform: translateY(-50%);
-}
+} */
