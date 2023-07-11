@@ -1,0 +1,30 @@
+.sessions {
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgb(154, 140, 120); */
+  width: 93%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 30px;
+}
+
+.titleSession {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.titleSession span {
+  font-size: 1.1rem;
+  font-family: Roboto;
+}
+
+/* .boxSession { */
+  /* padding: 0px 20px; */
+  /* display: flex;
+  justify-content: center; */
+  /* background-color: rgb(34, 112, 90); */
+  /* gap: 20px; */
+/* } */
+

@@ -5,14 +5,16 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-const Carousel = ({children}) => {
+const CarouselSession = ({ children }) => {
   const settings = {
     dots: false,
     infinite: false,
     speed: 2000,
-    slidesToShow: 5,
+    slidesToShow: 7,
     slidesToScroll: 1,
     initialSlide: 0,
+    // nextArrow: <SampleNextArrow />,
+    // prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
@@ -41,12 +43,26 @@ const Carousel = ({children}) => {
     ],
   };
 
-  return (
-    <Slider {...settings}>
-      {children}
-
-    </Slider>
-  );
+  return <Slider {...settings}>{children}</Slider>;
 };
 
-export default Carousel;
+export default CarouselSession;
+
+// const SampleNextArrow = ({ style, className, onClick }) => {
+//   return (
+//     <button
+//       className={className}
+//       onClick={onClick}
+//       style={{ ...style, display: "block", background: "red" }}
+//     />
+//   );
+// };
+// const SamplePrevArrow = ({ style, className, onClick  }) => {
+//   return (
+//     <button
+//       className={`${className} btn`}
+//       onClick={onClick}
+//       style={{ ...style, backgroundColor: "red"}}
+//     />
+//   );
+// };

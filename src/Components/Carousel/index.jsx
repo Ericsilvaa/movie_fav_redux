@@ -8,6 +8,8 @@ import "slick-carousel/slick/slick-theme.css";
 const Carousel = ({children}) => {
   const settings = {
     dots: true,
+    // arrows: false,
+    pauseOnHover: true,
     infinite: true,
     speed: 3000,
     slidesToShow: 1,

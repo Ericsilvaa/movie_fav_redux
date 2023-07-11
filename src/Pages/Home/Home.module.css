@@ -4,9 +4,8 @@
 }
 
 .banner {
-  margin-top: 3.8rem;
+  margin: 3.8rem 0px;
   width: 100%;
-  height: 65vh;
 }
 
 /* .slick-slider:nth-child()
@@ -15,7 +14,9 @@
 
 
 .ContainerSessions {
-  display: flex;
-  flex-direction: column;
-  gap: 70px;
+/* background-color: blueviolet; */
+/* padding: 30px; */
+display: flex;
+flex-direction: column;
+gap: 50px;
 }

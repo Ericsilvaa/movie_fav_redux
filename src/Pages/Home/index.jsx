@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 // components
 import Carousel from "../../Components/Carousel";
 import BannerMain from "../../Components/CardBanners/BannerMain";
-import Sessions from "../../Components/CardBanners/BannerSession";
+import Session from "../../Components/Session";
 
 // redux
 import { useDispatch, useSelector } from "react-redux";
@@ -15,11 +15,6 @@ import styles from "./Home.module.css";
 
 
 import genre from '../../data/genre.json'
-
-
-
-
-
 
 
 const Home = () => {
@@ -47,25 +42,20 @@ const Home = () => {
         </Carousel>
       </div>
       {/* style={{ backgroundColor: "#d3d3d3" }} */}
+      
+      
+      {/* COMPONENT SESSIONS  */}
+      {/* JA VAI RECEBER ARRAY COM TODAS AS DIVISÕES */}
       <div className={styles.ContainerSessions}>
         {genrer?.map((genreName, index) => (
-          <Sessions key={index} generos={genreName} />
+          <Session key={index} generos={genreName} />
         ))}
       </div>
+    
+    
     </div>
   );
 };
 
 export default Home;
 
-// if (loading) {
-//   console.log("LOGIN TRUE");
-// }
-// console.log("LOGIN FALSO");
-
-// console.log(allMovies);
-// setMovieNowPlaying(allMovies);
-
-// const movieImage = dataMovies.map(
-//   (eachUrl) => `${getImages}${eachUrl.backdrop_path}`
-// );

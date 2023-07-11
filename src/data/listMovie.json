@@ -100,5 +100,214 @@
     "video": false,
     "vote_average": 7.8,
     "vote_count": 5120
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/nGxUxi3PfXDRm7Vg95VBNgNM8yc.jpg",
+    "genre_ids": [
+      28,
+      12,
+      16,
+      878
+    ],
+    "id": 569094,
+    "original_language": "en",
+    "original_title": "Spider-Man: Across the Spider-Verse",
+    "overview": "Miles Morales retorna para o próximo capítulo da saga do Aranhaverso, uma aventura épica que transportará o Homem-Aranha em tempo integral e amigável do bairro do Brooklyn através do Multiverso para unir forças com Gwen Stacy e uma nova equipe de Homens-Aranha para enfrentar com um vilão mais poderoso do que qualquer coisa queeles já encontraram.",
+    "popularity": 2275.332,
+    "poster_path": "/xxPXsL8V95dTwL5vHWIIQALkJQS.jpg",
+    "release_date": "2023-05-31",
+    "title": "Homem-Aranha: Através do Aranhaverso",
+    "video": false,
+    "vote_average": 8.6,
+    "vote_count": 1738
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/nniZPBIfrep9wbx0l1529RHXeD8.jpg",
+    "genre_ids": [
+      16,
+      10751,
+      12,
+      14,
+      35
+    ],
+    "id": 502356,
+    "original_language": "en",
+    "original_title": "The Super Mario Bros. Movie",
+    "overview": "Os irmãos Mario e Luigi, de ascendência italiana, vivem em Brooklyn (Nova Iorque), onde trabalham como canalizadores. Certo dia, durante um serviço de reparação de uma conduta de água, são sugados por um tubo e transportados para o Reino Cogumelo, um universo paralelo governado pela Princesa Peach. Sem saber do paradeiro do irmão, Mario vai ter de aprender a sobreviver naquele lugar, adquirindo capacidades bizarras mas que serão grandes mais-valias para destruir os planos de Bowser, um verdadeiro vilão que tenciona dominar o mundo.",
+    "popularity": 1808.04,
+    "poster_path": "/ktU3MIeZtuEVRlMftgp0HMX2WR7.jpg",
+    "release_date": "2023-04-05",
+    "title": "Super Mario Bros.: O Filme",
+    "video": false,
+    "vote_average": 7.8,
+    "vote_count": 5120
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/nGxUxi3PfXDRm7Vg95VBNgNM8yc.jpg",
+    "genre_ids": [
+      28,
+      12,
+      16,
+      878
+    ],
+    "id": 569094,
+    "original_language": "en",
+    "original_title": "Spider-Man: Across the Spider-Verse",
+    "overview": "Miles Morales retorna para o próximo capítulo da saga do Aranhaverso, uma aventura épica que transportará o Homem-Aranha em tempo integral e amigável do bairro do Brooklyn através do Multiverso para unir forças com Gwen Stacy e uma nova equipe de Homens-Aranha para enfrentar com um vilão mais poderoso do que qualquer coisa queeles já encontraram.",
+    "popularity": 2275.332,
+    "poster_path": "/xxPXsL8V95dTwL5vHWIIQALkJQS.jpg",
+    "release_date": "2023-05-31",
+    "title": "Homem-Aranha: Através do Aranhaverso",
+    "video": false,
+    "vote_average": 8.6,
+    "vote_count": 1738
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/nniZPBIfrep9wbx0l1529RHXeD8.jpg",
+    "genre_ids": [
+      16,
+      10751,
+      12,
+      14,
+      35
+    ],
+    "id": 502356,
+    "original_language": "en",
+    "original_title": "The Super Mario Bros. Movie",
+    "overview": "Os irmãos Mario e Luigi, de ascendência italiana, vivem em Brooklyn (Nova Iorque), onde trabalham como canalizadores. Certo dia, durante um serviço de reparação de uma conduta de água, são sugados por um tubo e transportados para o Reino Cogumelo, um universo paralelo governado pela Princesa Peach. Sem saber do paradeiro do irmão, Mario vai ter de aprender a sobreviver naquele lugar, adquirindo capacidades bizarras mas que serão grandes mais-valias para destruir os planos de Bowser, um verdadeiro vilão que tenciona dominar o mundo.",
+    "popularity": 1808.04,
+    "poster_path": "/ktU3MIeZtuEVRlMftgp0HMX2WR7.jpg",
+    "release_date": "2023-04-05",
+    "title": "Super Mario Bros.: O Filme",
+    "video": false,
+    "vote_average": 7.8,
+    "vote_count": 5120
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/fgw4rFs4XMWdJTWp1eMacHKQqbZ.jpg",
+    "genre_ids": [
+      28,
+      53,
+      80
+    ],
+    "id": 603692,
+    "original_language": "en",
+    "original_title": "John Wick: Chapter 4",
+    "overview": "Com o preço por sua cabeça cada vez maior, John Wick leva sua luta contra a alta mesa global enquanto procura os jogadores mais poderosos do submundo, de Nova York a Paris, de Osaka a Berlim.",
+    "popularity": 2249.859,
+    "poster_path": "/rXTqhpkpj6E0YilQ49PK1SSqLhm.jpg",
+    "release_date": "2023-03-22",
+    "title": "John Wick 4: Baba Yaga",
+    "video": false,
+    "vote_average": 7.9,
+    "vote_count": 3313
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/nGxUxi3PfXDRm7Vg95VBNgNM8yc.jpg",
+    "genre_ids": [
+      28,
+      12,
+      16,
+      878
+    ],
+    "id": 569094,
+    "original_language": "en",
+    "original_title": "Spider-Man: Across the Spider-Verse",
+    "overview": "Miles Morales retorna para o próximo capítulo da saga do Aranhaverso, uma aventura épica que transportará o Homem-Aranha em tempo integral e amigável do bairro do Brooklyn através do Multiverso para unir forças com Gwen Stacy e uma nova equipe de Homens-Aranha para enfrentar com um vilão mais poderoso do que qualquer coisa queeles já encontraram.",
+    "popularity": 2275.332,
+    "poster_path": "/xxPXsL8V95dTwL5vHWIIQALkJQS.jpg",
+    "release_date": "2023-05-31",
+    "title": "Homem-Aranha: Através do Aranhaverso",
+    "video": false,
+    "vote_average": 8.6,
+    "vote_count": 1738
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/fgw4rFs4XMWdJTWp1eMacHKQqbZ.jpg",
+    "genre_ids": [
+      28,
+      53,
+      80
+    ],
+    "id": 603692,
+    "original_language": "en",
+    "original_title": "John Wick: Chapter 4",
+    "overview": "Com o preço por sua cabeça cada vez maior, John Wick leva sua luta contra a alta mesa global enquanto procura os jogadores mais poderosos do submundo, de Nova York a Paris, de Osaka a Berlim.",
+    "popularity": 2249.859,
+    "poster_path": "/rXTqhpkpj6E0YilQ49PK1SSqLhm.jpg",
+    "release_date": "2023-03-22",
+    "title": "John Wick 4: Baba Yaga",
+    "video": false,
+    "vote_average": 7.9,
+    "vote_count": 3313
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/nGxUxi3PfXDRm7Vg95VBNgNM8yc.jpg",
+    "genre_ids": [
+      28,
+      12,
+      16,
+      878
+    ],
+    "id": 569094,
+    "original_language": "en",
+    "original_title": "Spider-Man: Across the Spider-Verse",
+    "overview": "Miles Morales retorna para o próximo capítulo da saga do Aranhaverso, uma aventura épica que transportará o Homem-Aranha em tempo integral e amigável do bairro do Brooklyn através do Multiverso para unir forças com Gwen Stacy e uma nova equipe de Homens-Aranha para enfrentar com um vilão mais poderoso do que qualquer coisa queeles já encontraram.",
+    "popularity": 2275.332,
+    "poster_path": "/xxPXsL8V95dTwL5vHWIIQALkJQS.jpg",
+    "release_date": "2023-05-31",
+    "title": "Homem-Aranha: Através do Aranhaverso",
+    "video": false,
+    "vote_average": 8.6,
+    "vote_count": 1738
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/fgw4rFs4XMWdJTWp1eMacHKQqbZ.jpg",
+    "genre_ids": [
+      28,
+      53,
+      80
+    ],
+    "id": 603692,
+    "original_language": "en",
+    "original_title": "John Wick: Chapter 4",
+    "overview": "Com o preço por sua cabeça cada vez maior, John Wick leva sua luta contra a alta mesa global enquanto procura os jogadores mais poderosos do submundo, de Nova York a Paris, de Osaka a Berlim.",
+    "popularity": 2249.859,
+    "poster_path": "/rXTqhpkpj6E0YilQ49PK1SSqLhm.jpg",
+    "release_date": "2023-03-22",
+    "title": "John Wick 4: Baba Yaga",
+    "video": false,
+    "vote_average": 7.9,
+    "vote_count": 3313
+  },
+  {
+    "adult": false,
+    "backdrop_path": "/nGxUxi3PfXDRm7Vg95VBNgNM8yc.jpg",
+    "genre_ids": [
+      28,
+      12,
+      16,
+      878
+    ],
+    "id": 569094,
+    "original_language": "en",
+    "original_title": "Spider-Man: Across the Spider-Verse",
+    "overview": "Miles Morales retorna para o próximo capítulo da saga do Aranhaverso, uma aventura épica que transportará o Homem-Aranha em tempo integral e amigável do bairro do Brooklyn através do Multiverso para unir forças com Gwen Stacy e uma nova equipe de Homens-Aranha para enfrentar com um vilão mais poderoso do que qualquer coisa queeles já encontraram.",
+    "popularity": 2275.332,
+    "poster_path": "/xxPXsL8V95dTwL5vHWIIQALkJQS.jpg",
+    "release_date": "2023-05-31",
+    "title": "Homem-Aranha: Através do Aranhaverso",
+    "video": false,
+    "vote_average": 8.6,
+    "vote_count": 1738
   }
 ]

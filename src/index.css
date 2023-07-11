@@ -74,6 +74,12 @@ a {
   /* color: #333; */
 }
 
+/* .slick-track { 
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+} */
+
 /* .container {
   max-width: 50rem;
   padding: 0 1rem;
