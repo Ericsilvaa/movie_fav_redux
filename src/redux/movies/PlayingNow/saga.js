@@ -3,12 +3,12 @@ import {
   onGetMoviesPlayingNowSuccess,
   onGetMoviesPlayingNowFail,
 } from "./slice";
-import { constants } from "../../services/constants";
+import { constants } from "../../../services/constants";
 
 // import axios from "axios";
-import api from "../../services/api";
+import api from "../../../services/api";
 
-import data from "../../data/listMovie.json";
+import data from "../../../data/listMovie.json";
 
 function* onGetMoviesPlayingNow() {
   try {
@@ -29,7 +29,7 @@ function* onGetMoviesPlayingNow() {
 }
 
 export default all([
-  takeLatest("movies/onGetMoviesPlayingNow", onGetMoviesPlayingNow),
+  takeLatest("moviesPlayingNow/onGetMoviesPlayingNow", onGetMoviesPlayingNow),
 ]);
 
 // const moviesSagas = [

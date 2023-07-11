@@ -7,7 +7,7 @@ const initialState = {
 };
 
 const moviesSlice = createSlice({
-  name: "movies",
+  name: "moviesPlayingNow",
   initialState,
   reducers: {
     onGetMoviesPlayingNow: (state) => {
@@ -36,3 +36,6 @@ export const {
 } = moviesSlice.actions;
 
 export default moviesSlice.reducer;
+
+
+

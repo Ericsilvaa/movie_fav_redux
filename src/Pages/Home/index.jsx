@@ -7,29 +7,21 @@ import Session from "../../Components/Session";
 
 // redux
 import { useDispatch, useSelector } from "react-redux";
-import { onGetMoviesPlayingNow } from "../../redux/movies/slice";
+import { onGetMoviesPlayingNow } from "../../redux/movies/PlayingNow/slice";
+import { onGetListMoviesSession } from "../../redux/movies/ListMoviesSession/slice";
 
 // css
 import styles from "./Home.module.css";
 
-
-
-import genre from '../../data/genre.json'
-
-
 const Home = () => {
   const dispatch = useDispatch();
-  const { moviesNowPlayind, loading, error } = useSelector(
-    (state) => state.movies
-  );
-  
-
-  const [genrer, setGender] = useState()
+  const { moviesNowPlayind } = useSelector((state) => state.moviesPlayingNow);
+  const { moviesSession } = useSelector((state) => state.listMoviesSession);
 
 
   useEffect(() => {
     dispatch(onGetMoviesPlayingNow());
-    setGender(genre.slice(0,4))
+    dispatch(onGetListMoviesSession());
   }, [dispatch]);
 
   return (
@@ -42,20 +34,16 @@ const Home = () => {
         </Carousel>
       </div>
       {/* style={{ backgroundColor: "#d3d3d3" }} */}
-      
-      
+
       {/* COMPONENT SESSIONS  */}
       {/* JA VAI RECEBER ARRAY COM TODAS AS DIVISÕES */}
       <div className={styles.ContainerSessions}>
-        {genrer?.map((genreName, index) => (
-          <Session key={index} generos={genreName} />
+        {moviesSession?.map((movies, index) => (
+          <Session key={index} genreMovies={movies} />
         ))}
       </div>
-    
-    
     </div>
   );
 };
 
 export default Home;
-
