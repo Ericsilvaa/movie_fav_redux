@@ -10,7 +10,9 @@ const Header = () => {
     <header className={styles.bg_header}>
       <div className={`${styles.header} container`}>
         <div className={styles.home_logo}>
-          <MdOutlineLocalMovies className={styles.logo} />
+          <Link to={"/"}>
+            <MdOutlineLocalMovies className={styles.logo} />
+          </Link>
           <form>
             <label>
               {/* <BiSearch /> */}

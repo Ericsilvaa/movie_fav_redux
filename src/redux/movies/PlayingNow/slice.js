@@ -16,7 +16,7 @@ const moviesSlice = createSlice({
     onGetMoviesPlayingNowSuccess: (state, {payload}) => {
       return {
         ...state,
-        moviesNowPlayind: payload.slice(0,6),
+        moviesNowPlayind: payload.filter(movie => movie.overview).slice(0,6),
         loading: false
       }
 

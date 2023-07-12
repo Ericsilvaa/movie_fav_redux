@@ -11,6 +11,7 @@ export function* onGetListMoviesSession() {
   try {
 
     const listDividerSession = yield call(listSession);
+
     yield put(onGetListMoviesSessionSuccess(listDividerSession));
   } catch (error) {
     yield put(onGetListMoviesSessionFail(error.message));

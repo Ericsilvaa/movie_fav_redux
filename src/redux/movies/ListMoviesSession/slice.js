@@ -14,7 +14,11 @@ export const movieSessionSlice = createSlice({
       state.loading = true;
     },
     onGetListMoviesSessionSuccess: (state, { payload }) => {
-      (state.loading = false), (state.moviesSession = payload);
+      return {
+        ...state,
+        loading: false,
+        moviesSession: payload,
+      }
     },
     onGetListMoviesSessionFail: (state, payload) => {
       (state.loading = false), (state.moviesSession = payload);

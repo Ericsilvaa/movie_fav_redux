@@ -38,3 +38,10 @@ export const getListMoviesPlayingNow = async  () =>  {
 
   return data.results
 }
+
+
+export const getMovieById = async (id) => {
+  const { data } = await api.get(`${constants.events.GET_MOVIE_ID}${id}?${constants.events.GET_API_KEY}`);
+
+  return data;
+}
