@@ -1,5 +1,5 @@
 import api from "./api";
-
+import { constants } from "./constants";
 
 export const getListSixtyMovies = async (dataGenre) => {
   const sixtyMovies = [];
@@ -12,18 +12,29 @@ export const getListSixtyMovies = async (dataGenre) => {
       sixtyMovies.push(...data.results);
     })
   );
+  
   // chama função que faz a divisão dos filmes.
-
   return dividingSession(sixtyMovies, dataGenre);
 };
 
 const dividingSession = (movies, genres) => {
-  const session = genres.map((key) => {
-    return {
-      ...key,
-      movies: movies.filter((movie) => movie.genre_ids.includes(key.id)),
-    };
-  });
+  const session = genres
+    .map((key) => {
+      return {
+        ...key,
+        movies: movies.filter((movie) => movie.genre_ids.includes(key.id)),
+      };
+    })
+    .filter(({ movies }) => movies.length >= 13);
 
-  return session.filter(({ movies }) => movies.length >= 15);
+  return session;
 };
+
+
+
+export const getListMoviesPlayingNow = async  () =>  {
+  const {data} = await api.get(`${constants.events.GET_MOVIES_PLAYING_NOW}`)
+
+
+  return data.results
+}

@@ -3,25 +3,15 @@ import {
   onGetMoviesPlayingNowSuccess,
   onGetMoviesPlayingNowFail,
 } from "./slice";
-import { constants } from "../../../services/constants";
+import { moviesPlayingNow } from "../../../services/apiCalls";
 
-// import axios from "axios";
-import api from "../../../services/api";
 
-import data from "../../../data/listMovie.json";
 
 function* onGetMoviesPlayingNow() {
   try {
-    if (data) {
-      yield put(onGetMoviesPlayingNowSuccess(data));
-    }
-    // const { data } = yield call(
-    //   api.get,
-    //   constants.events.GET_MOVIES_PLAYING_NOW
-    // );
-    // const movies = data.results
-    // console.log(movies)
-    // yield put(onGetMoviesPlayingNowSuccess(movies));
+
+    const data = yield call(moviesPlayingNow);
+    yield put(onGetMoviesPlayingNowSuccess(data));
   } catch (error) {
     console.log("caiu no catch redux");
     yield put(onGetMoviesPlayingNowFail(error.message));

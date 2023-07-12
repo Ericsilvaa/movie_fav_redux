@@ -12,6 +12,7 @@ import { onGetListMoviesSession } from "../../redux/movies/ListMoviesSession/sli
 
 // css
 import styles from "./Home.module.css";
+import { getListMoviesPlayingNow } from "../../services/getFetchMovies";
 
 const Home = () => {
   const dispatch = useDispatch();

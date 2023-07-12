@@ -9,7 +9,7 @@ const CarouselSession = ({ children }) => {
   const settings = {
     dots: false,
     infinite: false,
-    speed: 2000,
+    speed: 500,
     slidesToShow: 10,
     slidesToScroll: 1,
     initialSlide: 0,
@@ -17,10 +17,18 @@ const CarouselSession = ({ children }) => {
     // prevArrow: <SamplePrevArrow />,
     responsive: [
       {
-        slidesToShow: 7,
-        breakpoint: 1024,
+        breakpoint: 1724,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 7,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 1324,
+        settings: {
+          slidesToShow: 5,
           slidesToScroll: 1,
           infinite: true,
           dots: false,
