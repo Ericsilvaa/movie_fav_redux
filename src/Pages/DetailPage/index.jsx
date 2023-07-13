@@ -1,8 +1,11 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./DetailPage.module.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { onGetMovieById, onResetMovieId } from "../../redux/movies/MovieById/slice";
+import {
+  onGetMovieById,
+  onResetMovieId,
+} from "../../redux/movies/MovieById/slice";
 
 const getImages = import.meta.env.VITE_IMG_MOVIE_CONCAT;
 
@@ -10,7 +13,7 @@ const MovieDetail = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const { movieID: moviesSelected } = useSelector((state) => state.movieId);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   // const backHome = useCallback(
   //   function () {
@@ -20,16 +23,24 @@ const MovieDetail = () => {
   // )
   // caso de filme não encontrado....
 
+  const scrollRef = useRef();
 
+  function scrollTo() {
+    scrollRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+    });
+  }
 
   useEffect(() => {
     dispatch(onGetMovieById(id));
+    scrollTo();
   }, [id]);
 
   if (!moviesSelected) return <div>Carregando...</div>;
 
   return (
-    <div className={styles.movie_info}>
+    <div ref={scrollRef} className={styles.movie_info}>
       <h2>{moviesSelected.title}</h2>
       <img
         src={`${getImages}${moviesSelected.backdrop_path}`}

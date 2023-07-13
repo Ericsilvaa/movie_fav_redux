@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 const getImages = import.meta.env.VITE_IMG_MOVIE_CONCAT;
 
 const CardSession = ({ movie }) => {
-  console.log(movie);
   return (
     <Link to={`filme/${movie.id}`}>
       <div className={styles.item_card} key={movie.id}>
