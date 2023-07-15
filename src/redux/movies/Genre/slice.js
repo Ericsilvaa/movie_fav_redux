@@ -1,19 +1,40 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  dataGenre: ['Eric'],
+  dataGenre: [],
+  genreSession: false,
+  loading: false,
+  error: null,
 };
 
 const genreSlice = createSlice({
-  name: "genre",
+  name: "genreByMovies",
   initialState,
   reducers: {
-    onGetGenre: (state, payload) => {
+    onGetMoviesByGenre: (state, payload) => {
       state.dataGenre = payload;
+    },
+    onGetMoviesByGenreSuccess: (state, { payload }) => {
+      return {
+        ...state,
+        dataGenre: payload
+      }
+    },
+    onGetMoviesByGenreFail: (state, { payload }) => {
+      state.dataGenre = ["Erro"];
     },
   },
 });
 
-export const { onGetGenre } = genreSlice.actions;
+
+
+
+
+export const movies = state => state.genres.dataGenre.filter(movies => movies.movies)
+
+
+
+export const { onGetMoviesByGenre, onGetMoviesByGenreSuccess, onGetMoviesByGenreFail } =
+  genreSlice.actions;
 
 export default genreSlice.reducer;

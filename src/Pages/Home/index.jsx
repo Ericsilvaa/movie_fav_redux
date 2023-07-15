@@ -8,7 +8,7 @@ import Session from "../../Components/Session";
 // redux
 import { useDispatch, useSelector } from "react-redux";
 import { onGetMoviesPlayingNow } from "../../redux/movies/PlayingNow/slice";
-import { onGetListMoviesSession } from "../../redux/movies/ListMoviesSession/slice";
+import { onGetListMoviesSession, selectorSessionMovies } from "../../redux/movies/ListMoviesSession/slice";
 
 // css
 import styles from "./Home.module.css";
@@ -17,7 +17,8 @@ const Home = () => {
   const dispatch = useDispatch();
   
   const { moviesNowPlayind } = useSelector((state) => state.moviesPlayingNow);
-  const { moviesSession } = useSelector((state) => state.listMoviesSession);
+  const  moviesSession  = useSelector(selectorSessionMovies);
+  // const  {moviesSession}  = useSelector(state => state.listMoviesSession);
 
 
   useEffect(() => {

@@ -2,9 +2,10 @@ import { all } from "redux-saga/effects";
 import moviesPlayingNow from "./movies/PlayingNow/saga";
 import listMoviesSession from "./movies/ListMoviesSession/saga";
 import movieById from "./movies/MovieById/saga";
+import moviesByGenrer from './movies/Genre/saga'
 
 export default function* rootSaga() {
-  return yield all([moviesPlayingNow, listMoviesSession, movieById]);
+  return yield all([moviesPlayingNow, listMoviesSession, movieById,moviesByGenrer]);
 }
 
 // Exemplo chamados no SAGAs

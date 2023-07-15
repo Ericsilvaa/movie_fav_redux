@@ -18,13 +18,17 @@ export const movieSessionSlice = createSlice({
         ...state,
         loading: false,
         moviesSession: payload,
-      }
+      };
     },
     onGetListMoviesSessionFail: (state, payload) => {
       (state.loading = false), (state.moviesSession = payload);
     },
   },
 });
+
+export const selectorSessionMovies = (state) =>
+  state.listMoviesSession.moviesSession
+  .slice(0, 6)
 
 export const {
   onGetListMoviesSession,

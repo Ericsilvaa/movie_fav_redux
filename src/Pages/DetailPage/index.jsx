@@ -13,7 +13,7 @@ const MovieDetail = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const { movieID: moviesSelected } = useSelector((state) => state.movieId);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // const backHome = useCallback(
   //   function () {
@@ -31,6 +31,10 @@ const MovieDetail = () => {
       block: "end",
     });
   }
+
+  function favorite(movie) {
+    console.log(movie)
+  } 
 
   useEffect(() => {
     dispatch(onGetMovieById(id));
@@ -52,7 +56,7 @@ const MovieDetail = () => {
       <strong>Avaliação: {moviesSelected.vote_average?.toFixed(1)} / 10</strong>
 
       <div className={styles.area_buttons}>
-        <button>Salvar</button>
+        <button onClick={() => favorite(moviesSelected)}>Salvar</button>
         <button>
           <a
             href={`https://youtube.com/results?search_query=${moviesSelected.title} Trailer`}

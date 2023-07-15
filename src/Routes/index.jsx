@@ -6,6 +6,7 @@ import Home from '../Pages/Home'
 import Favoritos from '../Pages/Favoritos'
 import MovieDetail from '../Pages/DetailPage'
 import NotFound from '../Components/NotFound'
+import AllMoviesGenre from '../Pages/AllMovieGenre'
 
 
 
@@ -15,6 +16,7 @@ const RoutesApp = () => {
       <Route path='/' element={<Home />} />
       <Route path='/favoritos' element={<Favoritos />} />
       <Route path='/filme/:id' element={<MovieDetail />} />
+      <Route path='/filmes/genero/:idName' element={<AllMoviesGenre />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
   )

@@ -8,7 +8,7 @@ const getImages = import.meta.env.VITE_IMG_MOVIE_CONCAT;
 
 const CardSession = ({ movie }) => {
   return (
-    <Link to={`filme/${movie.id}`}>
+    <Link to={`/filme/${movie.id}`}>
       <div className={styles.item_card} key={movie.id}>
         <img src={`${getImages}${movie.poster_path}`} alt="algum texto" />
         <div className={styles.description}>
