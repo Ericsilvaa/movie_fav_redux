@@ -17,6 +17,7 @@ const RoutesApp = () => {
       <Route path='/favoritos' element={<Favoritos />} />
       <Route path='/filme/:id' element={<MovieDetail />} />
       <Route path='/filmes/genero/:idName' element={<AllMoviesGenre />} />
+      <Route path='/filmes/favoritos' element={<Favoritos />} />
       <Route path='*' element={<NotFound />} />
     </Routes>
   )

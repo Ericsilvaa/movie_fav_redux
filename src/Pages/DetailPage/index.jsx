@@ -33,8 +33,23 @@ const MovieDetail = () => {
   }
 
   function favorite(movie) {
-    console.log(movie)
-  } 
+    // chamar um dispatch() -> ir no local / adicionar no local.
+    const getMoviesFavorites = localStorage.getItem("myFavoriteMovies");
+
+    let moviesSaved = JSON.parse(getMoviesFavorites) || [];
+
+    const hasFilme = moviesSaved.some(
+      (movieSaved) => movieSaved.id === movie.id
+    );
+    if (hasFilme) {
+      return alert(`O Filme ${movie.title} já está salvo na sua lista.`);
+    }
+
+    moviesSaved.push(movie);
+    localStorage.setItem("myFavoriteMovies", JSON.stringify(moviesSaved));
+    alert(`O Filme ${movie.title} já está salvo na sua lista.`);
+
+  }
 
   useEffect(() => {
     dispatch(onGetMovieById(id));

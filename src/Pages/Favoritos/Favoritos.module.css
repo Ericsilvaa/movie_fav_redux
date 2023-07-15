@@ -1,0 +1,4 @@
+.favoritos {
+  display: flex;
+  flex-direction: column;
+}

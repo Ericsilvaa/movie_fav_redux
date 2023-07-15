@@ -21,12 +21,14 @@ const Header = () => {
           </form>
         </div>
         <div className={styles.home_login}>
-          <span className={`${styles.subscribe} type_letter_secondary`}>
-            <Link>Subscribe</Link>
-          </span>
-          <span className="type_letter_secondary">
+          <Link to={'filmes/favoritos'}>
+            <span className={`${styles.subscribe}`}>
+              Meus Filmes
+            </span>
+          </Link>
+          {/* <span className="type_letter_secondary">
             <Link>LOG IN</Link>
-          </span>
+          </span> */}
         </div>
       </div>
     </header>
