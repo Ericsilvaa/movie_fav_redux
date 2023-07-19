@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styles from "./CardFavorite.module.css";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
+import {removeFavorite} from '../../../redux/movies/Favorite/slice'
+import { useDispatch } from "react-redux";
 
-const CardFavorite = ({movie, removeMovie}) => {
+const CardFavorite = ({movie}) => {
+  const dispatch = useDispatch()
 
   const getImages = import.meta.env.VITE_IMG_MOVIE_CONCAT;
 
@@ -15,7 +18,7 @@ const CardFavorite = ({movie, removeMovie}) => {
       </div>
       <div className={styles.area_buttons}>
         <Link to={`/filme/${movie.id}`}>Detalhes</Link>
-        <button onClick={() => removeMovie(movie.id)}>Remover</button>
+        <button onClick={() => dispatch(removeFavorite(movie.id))}>Remover</button>
       </div>
     </div>
   );

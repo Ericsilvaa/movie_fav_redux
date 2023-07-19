@@ -6,6 +6,7 @@ import {
   onGetMovieById,
   onResetMovieId,
 } from "../../redux/movies/MovieById/slice";
+import {addMovieFavorite} from '../../redux/movies/Favorite/slice'
 
 const getImages = import.meta.env.VITE_IMG_MOVIE_CONCAT;
 
@@ -32,24 +33,7 @@ const MovieDetail = () => {
     });
   }
 
-  function favorite(movie) {
-    // chamar um dispatch() -> ir no local / adicionar no local.
-    const getMoviesFavorites = localStorage.getItem("myFavoriteMovies");
 
-    let moviesSaved = JSON.parse(getMoviesFavorites) || [];
-
-    const hasFilme = moviesSaved.some(
-      (movieSaved) => movieSaved.id === movie.id
-    );
-    if (hasFilme) {
-      return alert(`O Filme ${movie.title} já está salvo na sua lista.`);
-    }
-
-    moviesSaved.push(movie);
-    localStorage.setItem("myFavoriteMovies", JSON.stringify(moviesSaved));
-    alert(`O Filme ${movie.title} já está salvo na sua lista.`);
-
-  }
 
   useEffect(() => {
     dispatch(onGetMovieById(id));
@@ -71,7 +55,7 @@ const MovieDetail = () => {
       <strong>Avaliação: {moviesSelected.vote_average?.toFixed(1)} / 10</strong>
 
       <div className={styles.area_buttons}>
-        <button onClick={() => favorite(moviesSelected)}>Salvar</button>
+        <button onClick={() => dispatch(addMovieFavorite(moviesSelected))}>Salvar</button>
         <button>
           <a
             href={`https://youtube.com/results?search_query=${moviesSelected.title} Trailer`}

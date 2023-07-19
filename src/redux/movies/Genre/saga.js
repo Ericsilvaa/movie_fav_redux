@@ -7,13 +7,11 @@ import {
 
 function* onGetMoviesByGenre({ payload }) {
   try {
-    console.log(payload);
     const [moviesByGenre] = yield select((state) =>
       state.listMoviesSession.moviesSession
         .filter((movie) => movie.name === payload)
         .map((moviesList) => moviesList.movies)
     );
-    console.log(moviesByGenre);
 
     yield put(onGetMoviesByGenreSuccess(moviesByGenre));
   } catch (error) {

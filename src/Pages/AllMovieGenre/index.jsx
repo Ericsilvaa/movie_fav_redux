@@ -14,7 +14,7 @@ const AllMoviesGenre = () => {
   useEffect(() => {
     dispatch(onGetMoviesByGenre(idName));
     scrollTo()
-console.log(`${idName}`)
+    console.log(`${idName}`)
     return (
       // cleanup
       () => {}
