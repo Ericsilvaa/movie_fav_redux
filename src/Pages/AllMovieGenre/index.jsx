@@ -14,7 +14,6 @@ const AllMoviesGenre = () => {
   useEffect(() => {
     dispatch(onGetMoviesByGenre(idName));
     scrollTo()
-    console.log(`${idName}`)
     return (
       // cleanup
       () => {}
@@ -33,7 +32,7 @@ const AllMoviesGenre = () => {
 
 
   return (
-    <div className="container" ref={scrollRef}>
+    <div className="container marginTopBody" ref={scrollRef}>
       <h2 style={{margin: '40px 0px 20px 0px'}}>{idName}</h2>
       <div
         style={{

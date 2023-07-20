@@ -1,35 +1,42 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./Favoritos.module.css";
 import CardFavorite from "../../Components/Card/CardFavorite";
 import { useSelector } from "react-redux";
 
 const Favoritos = () => {
-  // const [myFavoriteMovies, setMyFavoriteMovies] = useState();
-  const {data: myFavoriteMovies } = useSelector(state => state.favorite)
+  const { data: myFavoriteMovies } = useSelector((state) => state.favorite);
+
+  const scrollRef = useRef();
 
 
-
-  // useEffect(() => {
-  //   const favoriteMovies = JSON.parse(localStorage.getItem("myFavoriteMovies"));
-  //   if (!favoriteMovies.length) return setMyFavoriteMovies([]);
-  //   setMyFavoriteMovies(favoriteMovies);
-  // }, []);
-
-  // function removeMovie(id) {
-  //   let newArray = myFavoriteMovies.filter((movieRemove) => movieRemove.id !== id);
-  //   localStorage.setItem("myFavoriteMovies", JSON.stringify(newArray));
-  //   console.log(newArray)
-  //   setMyFavoriteMovies(newArray);
-  //   alert(`O Filme foi removido de sua lista.`);
-
-  // }
+  function scrollTo() {
+    scrollRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+    });
+  }
+  useEffect(() => {
+    scrollTo();
+  }, [scrollTo]);
 
   if (!myFavoriteMovies?.length)
-    return <div className="container"> Nenhum Filme na lista </div>;
+    return (
+      <div
+        className="container marginTopBody"
+        style={{
+          textAlign: "center",
+          fontSize: "1.275rem",
+          marginTop: "3.8rem",
+        }}
+      >
+        {" "}
+        Nenhum Filme na lista{" "}
+      </div>
+    );
 
   return (
     <>
-      <h2 className="container">Meu Filmes</h2>
+      <h2 ref={scrollRef} className="container marginTopBody">Meu Filmes</h2>
       <div className={`${styles.favoritos} container`}>
         {myFavoriteMovies.map((movie) => (
           <CardFavorite

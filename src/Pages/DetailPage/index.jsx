@@ -43,7 +43,7 @@ const MovieDetail = () => {
   if (!moviesSelected) return <div>Carregando...</div>;
 
   return (
-    <div ref={scrollRef} className={styles.movie_info}>
+    <div ref={scrollRef} className={`${styles.movie_info} `}>
       <h2>{moviesSelected.title}</h2>
       <img
         src={`${getImages}${moviesSelected.backdrop_path}`}

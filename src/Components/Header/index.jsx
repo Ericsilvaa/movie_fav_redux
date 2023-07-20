@@ -13,12 +13,12 @@ const Header = () => {
           <Link to={"/"}>
             <MdOutlineLocalMovies className={styles.logo} />
           </Link>
-          <form>
-            <label>
+          {/* <form>
+            <label> */}
               {/* <BiSearch /> */}
-              <input type="text" name="search" placeholder="Search" />
+              {/* <input type="text" name="search" placeholder="Search" />
             </label>
-          </form>
+          </form> */}
         </div>
         <div className={styles.home_login}>
           <Link to={'filmes/favoritos'}>

@@ -10,7 +10,7 @@ const CarouselSession = ({ children }) => {
     dots: false,
     infinite: false,
     speed: 500,
-    slidesToShow: 10,
+    slidesToShow: 9,
     slidesToScroll: 1,
     initialSlide: 0,
     // nextArrow: <SampleNextArrow />,
@@ -19,7 +19,7 @@ const CarouselSession = ({ children }) => {
       {
         breakpoint: 1724,
         settings: {
-          slidesToShow: 7,
+          slidesToShow: 6,
           slidesToScroll: 1,
           infinite: true,
           dots: false,

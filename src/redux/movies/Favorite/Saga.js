@@ -20,6 +20,7 @@ import {
   removeFavorites,
 } from "../../../services/getFavoritesCalls";
 
+
 // chamado ao LOCALSTORAGE
 function* getMoviesFavorites() {
   try {
@@ -35,26 +36,25 @@ function* getMoviesFavorites() {
   }
 }
 
-function* addMovieFavorite({payload}) {
+function* addMovieFavorite({ payload }) {
   try {
     // yield take("moviesFavorites/getMoviesFavoritesLocalStorage");
-    const {data} = yield select((state) => state.favorite);
+    const { data } = yield select((state) => state.favorite);
 
-    const newList = yield call(addMovieList,data, payload);
-    console.log(newList)
+    const newList = yield call(addMovieList, data, payload);
     yield put(addMovieFavoriteSuccess(newList));
   } catch (error) {
     yield put(addMovieFavoriteFailure(error));
-    console.log('caiu aqui')
+    console.log("caiu aqui");
   }
 }
 
-function* removeFavorite({payload}) {
-  console.log(payload)
+function* removeFavorite({ payload }) {
+  console.log(payload);
   try {
     // yield take("moviesFavorites/getMoviesFavoritesLocalStorage");
-    const {data} = yield select((state) => state.favorite);
-    console.log(data)
+    const { data } = yield select((state) => state.favorite);
+    console.log(data);
     const newList = yield call(removeFavorites, data, payload);
     yield put(removeFavoriteSucces(newList));
   } catch (error) {
