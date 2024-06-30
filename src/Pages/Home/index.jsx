@@ -1,30 +1,32 @@
-import React, { useEffect } from "react";
+import React from 'react'
 
 // components
-import Carousel from "../../Components/Carousel";
-import BannerMain from "../../Components/CardBanners/BannerMain";
-import Session from "../../Components/Session";
+import BannerMain from '../../Components/CardBanners/BannerMain'
+import Carousel from '../../Components/Carousel'
+import Session from '../../Components/Session'
 
 // redux
-import { useDispatch, useSelector } from "react-redux";
-import { onGetMoviesPlayingNow } from "../../redux/movies/PlayingNow/slice";
-import { onGetListMoviesSession, selectorSessionMovies } from "../../redux/movies/ListMoviesSession/slice";
+import { useDispatch, useSelector } from 'react-redux'
+import {
+  onGetListMoviesSession,
+  selectorSessionMovies
+} from '../../redux/movies/ListMoviesSession/slice'
+import { onGetMoviesPlayingNow } from '../../redux/movies/PlayingNow/slice'
 
 // css
-import styles from "./Home.module.css";
+import styles from './Home.module.css'
 
 const Home = () => {
-  const dispatch = useDispatch();
-  
-  const { moviesNowPlayind } = useSelector((state) => state.moviesPlayingNow);
-  const  moviesSession  = useSelector(selectorSessionMovies);
+  const dispatch = useDispatch()
+
+  const { moviesNowPlayind } = useSelector((state) => state.moviesPlayingNow)
+  const moviesSession = useSelector(selectorSessionMovies)
   // const  {moviesSession}  = useSelector(state => state.listMoviesSession);
 
-
-  useEffect(() => {
-    dispatch(onGetMoviesPlayingNow());
-    dispatch(onGetListMoviesSession());
-  }, [dispatch]);
+  React.useEffect(() => {
+    dispatch(onGetMoviesPlayingNow())
+    dispatch(onGetListMoviesSession())
+  }, [dispatch])
 
   return (
     <div className={styles.home}>
@@ -45,7 +47,7 @@ const Home = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
