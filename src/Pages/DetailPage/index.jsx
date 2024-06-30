@@ -3,9 +3,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { addMovieFavorite } from '../../redux/movies/Favorite/slice'
 import { onGetMovieById } from '../../redux/movies/MovieById/slice'
+import { constants } from '../../services/constants'
 import styles from './DetailPage.module.css'
 
-const getImages = import.meta.env.VITE_IMG_MOVIE_CONCAT
+const getImages = constants.events.GET_MOVIE_IMAGES
 
 const MovieDetail = () => {
   const { id } = useParams()
