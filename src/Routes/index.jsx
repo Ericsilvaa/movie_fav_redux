@@ -1,24 +1,21 @@
-import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import WithLazyLoad from './lazyload'
+import { path } from './paths'
 
-
-import Home from '../Pages/Home'
-import Favoritos from '../Pages/Favoritos'
-import MovieDetail from '../Pages/DetailPage'
-import NotFound from '../Components/NotFound'
-import AllMoviesGenre from '../Pages/AllMovieGenre'
-
-
+const LazyHome = WithLazyLoad(() => import('../Pages/Home'))
+const LazyAllMoviesGenre = WithLazyLoad(() => import('../Pages/AllMovieGenre'))
+const LazyFavorites = WithLazyLoad(() => import('../Pages/Favoritos'))
+const LazyDetails = WithLazyLoad(() => import('../Pages/DetailPage'))
+const LazyNotFound = WithLazyLoad(() => import('../Components/NotFound'))
 
 const RoutesApp = () => {
   return (
     <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/favoritos' element={<Favoritos />} />
-      <Route path='/filme/:id' element={<MovieDetail />} />
-      <Route path='/filmes/genero/:idName' element={<AllMoviesGenre />} />
-      <Route path='/filmes/favoritos' element={<Favoritos />} />
-      <Route path='*' element={<NotFound />} />
+      <Route path={path.home} element={<LazyHome />} />
+      <Route path={path.filme.movieId} element={<LazyDetails />} />
+      <Route path={path.filme.genrer} element={<LazyAllMoviesGenre />} />
+      <Route path={path.filme.favorites} element={<LazyFavorites />} />
+      <Route path='*' element={<LazyNotFound />} />
     </Routes>
   )
 }
