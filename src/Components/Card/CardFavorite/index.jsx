@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from "react";
-import styles from "./CardFavorite.module.css";
-import { Link } from "react-router-dom"
-import {removeFavorite} from '../../../redux/movies/Favorite/slice'
-import { useDispatch } from "react-redux";
+import React from 'react'
+import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { removeFavorite } from '../../../redux/movies/Favorite/slice'
+import { constants } from '../../../services/constants'
+import styles from './CardFavorite.module.css'
 
-const CardFavorite = ({movie}) => {
+const CardFavorite = ({ movie }) => {
   const dispatch = useDispatch()
 
-  const getImages = import.meta.env.VITE_IMG_MOVIE_CONCAT;
+  const getImages = constants.events.GET_MOVIE_IMAGES
 
   return (
     <div className={`${styles.card}`}>
@@ -18,10 +19,12 @@ const CardFavorite = ({movie}) => {
       </div>
       <div className={styles.area_buttons}>
         <Link to={`/filme/${movie.id}`}>Detalhes</Link>
-        <button onClick={() => dispatch(removeFavorite(movie.id))}>Remover</button>
+        <button onClick={() => dispatch(removeFavorite(movie.id))}>
+          Remover
+        </button>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CardFavorite;
+export default CardFavorite
