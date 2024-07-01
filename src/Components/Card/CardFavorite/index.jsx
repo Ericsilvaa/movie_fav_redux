@@ -1,8 +1,8 @@
-import React from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { removeFavorite } from '../../../redux/movies/Favorite/slice'
 import { constants } from '../../../services/constants'
+import CustomButton from '../../Button/Button'
 import styles from './CardFavorite.module.css'
 
 const CardFavorite = ({ movie }) => {
@@ -19,9 +19,9 @@ const CardFavorite = ({ movie }) => {
       </div>
       <div className={styles.area_buttons}>
         <Link to={`/filme/${movie.id}`}>Detalhes</Link>
-        <button onClick={() => dispatch(removeFavorite(movie.id))}>
+        <CustomButton onClick={() => dispatch(removeFavorite(movie.id))}>
           Remover
-        </button>
+        </CustomButton>
       </div>
     </div>
   )
