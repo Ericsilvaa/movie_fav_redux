@@ -15,7 +15,64 @@
   margin: 0 auto;
 }
 
-/* .container {
-  width: 90%;
+.card {
+  margin: 20px 0px;
+  display: grid;
+  grid-template-columns: 200px 1fr 150px;
+  max-height: 200px;
+  align-items: center;
+  align-content: center;
+  padding: 0px 20px;
+  box-shadow: 0px 0px 2px #95999c;
+  border-radius: 8px;
+}
+
+.card_img_favorite {
   margin: 0 auto;
-} */
+  object-fit: cover;
+  height: 68%;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.info_favorite {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 90%;
+}
+
+.info_favorite p {
+  height: 10ch;
+  overflow: hidden;
+}
+
+.item_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  cursor: pointer;
+}
+
+.item_card img {
+  height: 250px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+
+.description {
+  width: 160px;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+
+.description p:hover {
+  text-decoration: overline;
+}
+
+.card_date {
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #676161;
+}

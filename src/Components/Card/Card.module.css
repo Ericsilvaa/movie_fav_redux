@@ -1,3 +1,23 @@
+.card img {
+  margin: 0 auto;
+  object-fit: cover;
+  height: 68%;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 90%;
+}
+
+.info p {
+  height: 10ch;
+  overflow: hidden;
+}
+
 .area_buttons {
   display: flex;
   gap: 20px;
