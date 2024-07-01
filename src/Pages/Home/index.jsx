@@ -41,6 +41,7 @@ const Home = () => {
 
       {/* COMPONENT SESSIONS  */}
       {/* JA VAI RECEBER ARRAY COM TODAS AS DIVISÕES */}
+      <div className={styles.marginToTop} />
       <div className={styles.ContainerSessions}>
         {moviesSession?.map((movies, index) => (
           <Session key={index} genreMovies={movies} />

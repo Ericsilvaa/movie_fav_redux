@@ -41,7 +41,7 @@
   box-sizing: border-box;
   border: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: var(--letter-color-primary);
   /* font-family: DM Sans; */
 }
@@ -139,10 +139,3 @@ a {
 /* .VictoryContainer {
   height: initial !important;
 } */
-
-
-
-.marginTopBody {
-  margin-top: 3.8rem;
-
-}
