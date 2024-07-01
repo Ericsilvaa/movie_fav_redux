@@ -6,15 +6,17 @@ import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 import './App.css'
+import useScrollToTop from './hooks/useScrollToTop'
 
 function App() {
+  useScrollToTop()
+
   return (
     <div className='app'>
       <ToastContainer limit={3} autoClose={1500} />
       <Header />
       <div className='main'>
         <RoutesApp />
-        {/* <LazyRouter /> */}
       </div>
       <Footer />
     </div>
