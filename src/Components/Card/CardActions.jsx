@@ -1,8 +1,8 @@
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { removeFavorite } from '../../../redux/movies/Favorite/slice'
-import CustomButton from '../../Button/Button'
-import styles from './CardFavorite.module.css'
+import { removeFavorite } from '../../redux/movies/Favorite/slice'
+import CustomButton from '../Button/Button'
+import styles from './Card.module.css'
 
 export const CardActions = ({ movieId }) => {
   const dispatch = useDispatch()
