@@ -4,19 +4,20 @@
 }
 
 .banner {
-  margin: 3.8rem 0px;
   width: 100%;
+}
+
+.marginToTop {
+  margin-top: 2rem;
 }
 
 /* .slick-slider:nth-child()
   dar um display none no button
 */
 
-
 .ContainerSessions {
-/* background-color: blueviolet; */
-/* padding: 30px; */
-display: flex;
-flex-direction: column;
-gap: 50px;
+  /* padding: 30px; */
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }

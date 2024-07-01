@@ -1,6 +1,8 @@
-import { useEffect, useRef } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
+import CustomButton from '../../Components/Button/Button'
+import { Title } from '../../Components/Typography/Title'
 import { addMovieFavorite } from '../../redux/movies/Favorite/slice'
 import { onGetMovieById } from '../../redux/movies/MovieById/slice'
 import { constants } from '../../services/constants'
@@ -12,49 +14,31 @@ const MovieDetail = () => {
   const { id } = useParams()
   const dispatch = useDispatch()
   const { movieID: moviesSelected } = useSelector((state) => state.movieId)
-  // const navigate = useNavigate();
 
-  // const backHome = useCallback(
-  //   function () {
-  //     dispatch(onResetMovieId())
-  //     navigate('/', {replace: true})
-  //   }, [navigate]
-  // )
-  // caso de filme não encontrado....
-
-  const scrollRef = useRef()
-
-  function scrollTo() {
-    scrollRef.current?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'end'
-    })
+  const handleAddFavorite = () => {
+    dispatch(addMovieFavorite(moviesSelected))
   }
 
-  useEffect(() => {
+  React.useEffect(() => {
     dispatch(onGetMovieById(id))
-    scrollTo()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id])
 
   if (!moviesSelected) return <div>Carregando...</div>
 
   return (
-    <div ref={scrollRef} className={`${styles.movie_info} `}>
-      <h2>{moviesSelected.title}</h2>
+    <div className={`${styles.movie_info} `}>
+      <Title text={moviesSelected.title} />
       <img
         src={`${getImages}${moviesSelected.backdrop_path}`}
         alt={moviesSelected.title}
       />
       <h3>Sinopse</h3>
       <span>{moviesSelected.overview}</span>
-
       <strong>Avaliação: {moviesSelected.vote_average?.toFixed(1)} / 10</strong>
-
       <div className={styles.area_buttons}>
-        <button onClick={() => dispatch(addMovieFavorite(moviesSelected))}>
-          Salvar
-        </button>
-        <button>
+        <CustomButton onClick={handleAddFavorite}>Salvar</CustomButton>
+        <CustomButton>
           <a
             href={`https://youtube.com/results?search_query=${moviesSelected.title} Trailer`}
             target='_blank'
@@ -62,7 +46,7 @@ const MovieDetail = () => {
           >
             Trailer
           </a>
-        </button>
+        </CustomButton>
       </div>
     </div>
   )

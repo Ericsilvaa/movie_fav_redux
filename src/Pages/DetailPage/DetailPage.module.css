@@ -2,8 +2,6 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  margin-bottom: 6rem;
-  margin-top: 20px;
   max-width: 800px;
   padding: 0 8px;
 }
@@ -50,7 +48,7 @@
   border: none;
   font-size: 0.975rem;
   font-weight: 600;
-  transition: all .9s;
+  transition: all 0.9s;
 }
 
 .area_buttons a {
@@ -58,11 +56,11 @@
   color: aliceblue;
 }
 
-.area_buttons button:hover{
+.area_buttons button:hover {
   background: linear-gradient(
-  90deg,
-  rgba(10, 10, 189, 0.8) 0%,
-  rgba(21, 66, 190, 1) 100%
-);
-transition: all .9s;
+    90deg,
+    rgba(10, 10, 189, 0.8) 0%,
+    rgba(21, 66, 190, 1) 100%
+  );
+  transition: all 0.9s;
 }
