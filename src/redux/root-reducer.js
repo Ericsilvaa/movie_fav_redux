@@ -1,11 +1,11 @@
-import { combineReducers } from "@reduxjs/toolkit";
+import { combineReducers } from '@reduxjs/toolkit'
 
 // reducers
-import moviesPlayingNowReducer from './movies/PlayingNow/slice'
+import moviesFavorites from './movies/Favorite/slice'
 import genresReducer from './movies/Genre/slice'
 import moviesSessionReducer from './movies/ListMoviesSession/slice'
-import moviesByIdReducer from  './movies/MovieById/slice'
-import moviesFavorites from  './movies/Favorite/slice'
+import moviesByIdReducer from './movies/MovieById/slice'
+import moviesPlayingNowReducer from './movies/PlayingNow/slice'
 
 export default combineReducers({
   genres: genresReducer,
@@ -13,5 +13,4 @@ export default combineReducers({
   listMoviesSession: moviesSessionReducer,
   movieId: moviesByIdReducer,
   favorite: moviesFavorites
-
 })
