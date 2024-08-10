@@ -1,39 +1,42 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
   moviesSession: [],
   error: null,
-  loading: false,
-};
+  loading: false
+}
 
 export const movieSessionSlice = createSlice({
-  name: "listMoviesSession",
+  name: 'listMoviesSession',
   initialState,
   reducers: {
     onGetListMoviesSession: (state) => {
-      state.loading = true;
+      state.loading = true
     },
     onGetListMoviesSessionSuccess: (state, { payload }) => {
       return {
         ...state,
         loading: false,
-        moviesSession: payload,
-      };
+        moviesSession: payload
+      }
     },
     onGetListMoviesSessionFail: (state, payload) => {
-      (state.loading = false), (state.moviesSession = payload);
+      return (state.loading = false), (state.moviesSession = payload)
     },
-  },
-});
+    onCachedMovies: (state, { payload }) => {
+      state.moviesSession = payload
+    }
+  }
+})
 
 export const selectorSessionMovies = (state) =>
-  state.listMoviesSession.moviesSession
-  .slice(0, 6)
+  state.listMoviesSession.moviesSession.slice(0, 6)
 
 export const {
   onGetListMoviesSession,
   onGetListMoviesSessionSuccess,
   onGetListMoviesSessionFail,
-} = movieSessionSlice.actions;
+  onCachedMovies
+} = movieSessionSlice.actions
 
-export default movieSessionSlice.reducer;
+export default movieSessionSlice.reducer

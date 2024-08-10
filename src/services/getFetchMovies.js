@@ -17,7 +17,7 @@ export const getListSixtyMovies = async (dataGenre) => {
   return dividingSession(sixtyMovies, dataGenre)
 }
 
-const dividingSession = (movies, genres) => {
+export const dividingSession = (movies, genres) => {
   const session = genres
     .map((key) => {
       return {
